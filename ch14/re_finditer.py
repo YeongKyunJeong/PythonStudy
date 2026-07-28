@@ -4,6 +4,7 @@ import re
 text = "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. "
 p = re.compile("[Pp]ython")
 result = p.finditer(text)
+print(type(result))
 
 for r in result:
     print(f"{r.group()} : {r.span()}")
