@@ -107,4 +107,51 @@ def solve_maze(maze, start):
                     and maze[nr][nc] == 0):
                     stack.append((nr, nc))
 
-                    
+def graphdfs (maze, start):
+    n = len(maze)
+    m = len(maze[0])
+    stack = [start]
+    dirs = ((1, 0), (0, 1), (-1, 0), (0, -1))
+    visited = [[False]*m for _ in range(n)]
+    visited[start[0]][start[1]] = True
+    order = []
+
+    while stack:
+        curi, curj = stack.pop()
+        order.append((curi, curj))
+
+        for di, dj in reversed(dirs):
+            nxti = curi + di
+            nxtj = curj + dj
+            if (nxti < 0 or nxti >= n or nxtj < 0 or nxtj >= m
+                or visited[nxti][nxtj] or maze[nxti][nxtj] == 1):
+                continue
+            visited[nxti][nxtj] = True
+            stack.append((nxti, nxtj))
+    return order
+
+
+from collections import deque
+def graphbfs(maze, start):
+    n = len(maze)
+    m = len(maze[0])
+    dirs = ((1, 0), (0, 1), (-1, 0), (0, -1))
+    queue = deque()
+    queue.append(start)
+    visited = [[False]*m for _ in range(n)]
+    visited[start[0]][start[1]] = True
+    order = []
+    while queue():
+        curi, curj = queue.popleft()
+        order.append(curi, curj)
+
+        for di, dj in dirs:
+            nxti = curi + di
+            nxtj = curj + dj
+            if (nxti < 0 or nxti >= n or nxtj < 0 or nxtj >= m
+                or visited[nxti][nxtj] or maze[nxti][nxtj] == 1):
+                continue
+            queue.append((nxti, nxtj))
+            visited[nxti][nxtj] == True
+    return order
+            
