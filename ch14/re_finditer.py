@@ -14,3 +14,9 @@ p = re.compile('[a-z]+')
 result = p.finditer("life is too short")
 for r in result:
     print(f"{r.group()} : {r.span()}")
+
+
+p = re.compile("[a-zA-Z]+")
+result = p.finditer(text)
+for r in result:
+    print(f"{r.group()} : {r.span()}")

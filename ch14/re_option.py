@@ -4,6 +4,7 @@ import re
 p = re.compile("a.b")
 print(p.match("a\nb"))   # None, 정규표현식에서 .은 개행문자를 무시함
 
+
 p = re.compile("a.b", re.DOTALL)
 print(p.match("a\nb"))   # "a\nb", \과 n을 각각 별개의 문자로 봄
 
@@ -39,4 +40,4 @@ p = re.compile(r"""                # & : 문자 엔티티의 시작을 나타냄
                 |x[0-9a-fA-F]+     # 반드시 x로 시작 + Hexadecimal form(16진수)
                 );""",             # ; 문자 엔티티의 끝을 나타냄
                   re.X)
-data = "&#07; &#8; &#x0A"
+data = "&#07; &#08; &#x0A"

@@ -7,3 +7,8 @@
 import re
 m = re.match('[a-z]+', "python")
 print(m)
+
+print(m.group())
+print(m.span())
+print(m.start())
+print(m.end())
