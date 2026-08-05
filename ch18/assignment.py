@@ -26,13 +26,13 @@
 # arr = np.random.randint(1, 13, (3, 4))
 # print(arr.max(axis = 1))
 
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 
-x = [1, 2, 3, 4, 5]
-y = [2, 4, 6, 8 ,10]
-plt.plot(x, y)
-plt.title("Title")
-plt.xlabel("x-Axis")
-plt.ylabel("y-Axis")
-plt.grid()
-plt.show()
+# x = [1, 2, 3, 4, 5]
+# y = [2, 4, 6, 8 ,10]
+# plt.plot(x, y)
+# plt.title("Title")
+# plt.xlabel("x-Axis")
+# plt.ylabel("y-Axis")
+# plt.grid()
+# plt.show()

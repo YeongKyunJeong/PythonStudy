@@ -96,7 +96,19 @@ import numpy as np
 # print(arr[0:2, 1:3])
 
 # 조건부 연산
-arr = np.array([[1, 2, 3, 4, 5, 4], [4, 4, 4, 4, 4 ,4]])
-print(arr == 4)
-filtered = arr[arr == 4]
-print(filtered)
+# arr = np.array([[1, 2, 3, 4, 5, 4], [4, 4, 4, 4, 4 ,4]])
+# print(arr == 4)
+# filtered = arr[arr == 4]
+# print(filtered)
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([[1], [2], [3]])
+arr3 = np.array([[1, 2, 3]])
+# print(np.dot(arr1, arr2))
+arr4 = np.array([[1, 2, 3, 4], [10, 20, 30, 40], [7, 8, 9, 0]])
+print(arr2)
+print(arr2.shape)
+print(arr3)
+print(arr3.shape)
+print(arr4)
+print(arr4.shape)

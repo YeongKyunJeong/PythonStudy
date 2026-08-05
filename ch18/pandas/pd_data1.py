@@ -108,5 +108,12 @@ df1 = pd.concat([merged, df1])
 print(df1.duplicated())
 print(df1)
 
-df1_1 = df1.drop_duplicates()
-print(df1_1)
+# df1_1 = df1.drop_duplicates()
+# print(df1_1)
+# df1_1 = df1_1.drop(0)
+# print(df1_1)
+# # df1_1 = df1_1.drop(0) # KeyError 발생
+# # print(df1_1)
+
+# df1_2 = df1.drop(0)
+# print(df1_2)
